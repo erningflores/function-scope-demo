@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Scope Demo</title>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <h1>Testing the scope of the variables</h1>
+    <section></section>
+
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+
+    <script>
+        const x = 1;
+        function a(){
+            y = 2;
+            output(y);
+           // output(x);
+           // output(z);
+        }
+        function b(){
+            z=3;
+            output(z);
+            //output(x);
+           // output(y);
+        }
+        function output(value){
+            const para = document.createElement("p");
+            document.body.appendChild(para);
+            para.textContent = `Value: ${value}`;
+        }
+    </script>
+</body>
+</html>
